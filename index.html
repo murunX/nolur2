@@ -1,29 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <link rel="stylesheet" href="style.css"/>
- <title>maiiiiiiiiiiiiii jargaliin salaavch</title>
- </head>
- <body>
- <div class="container">
- <div class="panel active" style="background-image: url('images/1.jpg')">
- <h3>mai</h3>
- </div>
- <div class="panel" style="background-image: url('images/2.jpg')">
- <h3>pisda</h3>
- </div>
- <div class="panel" style="background-image: url('images/3.jpg')">
- <h3>sda</h3>
- </div>
- <div class="panel" style="background-image: url('images/4.jpg')">
- <h3>min</h3>
- </div>
- <div class="panel" style="background-image: url('images/5.jpg')">
- <h3>tui</h3>
- </div>
- </div>
- <script src="script.js"></script>
- </body>
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  height=device-height, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" type="image/png" href="salaavch.png">
+    <title>
+        Mai hooy! 
+    </title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-730729-1"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        window.dataLayer = window.dataLayer || []
+
+        function gtag() {
+            dataLayer.push(arguments)
+        }
+
+        gtag('js', new Date())
+        gtag('config', 'UA-730729-1')
+    </script>
+    <link rel="stylesheet" href="nah.css"/>
+    <script>
+        $(function() {
+            console.log("mai ahinduu");
+            $('.chat').click(function(e) {
+                e.preventDefault();
+                if ($("#iframe").attr('src') === "#") {
+                    $("#iframe").attr("src", "/chat/blabax.php")
+                }
+                $("#iframe").show();
+                $('#close').show();
+            });
+            $('#close').click(function(e) {
+                e.preventDefault();
+                $('#close').hide();
+                $('#iframe').hide();
+                $('#show').hide();
+                $('#container').show();
+            });
+        });
+    </script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=639b282d5150cb0013011d0b&product=inline-share-buttons&source=platform" async="async"></script>
+</head>
+
+<body class="page-homepage">
+    <script>
+        let commentics_config = {
+            'identifier': '1',
+            'reference': 'nolur.com'
+        };
+
+        let audio = new Audio('munh.mp3');
+        let nahInterval;
+
+        function nah() {
+            let x = document.querySelector("#nah img");
+            if (x.classList.contains("start")) {
+                x.classList.remove("start");
+                clearInterval(nahInterval);
+                audio.play();
+            } else {
+                x.classList.add("start");
+                clearInterval(nahInterval);
+                setTimeout(() => {
+                    audio.play();
+                    nahInterval = setInterval(function() {
+                        audio.play();
+                    }, 1000);
+                }, 500);
+            }
+        }
+    </script>
+    <div id="nah">
+        <img src="salaavch.png" alt="NAH!" onclick="nah()"/>
+    </div>
+</div>
+<div id="footer">
+   
+    <a class="beer" href="" target="_blank">
+<img src="herald.jpg" />
+</a>
+    <div class="sharethis-inline-share-buttons"></div>
+    2022-2023 © Tomoo.mn
+</div>
+</div>
+<div id="close">
+    <a href="#" id="close">close</a>
+</div>
+<iframe src="#" width="100%" height="100%" id="iframe" />
+</body>
+
 </html>
+<script>
+
+</script>
